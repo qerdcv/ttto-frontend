@@ -1,0 +1,33 @@
+@import "src/styles/colors";
+@import "src/styles/mixins";
+
+.header {
+  padding: 40px 0;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+
+.home {
+  @include fuzzyBorder(0, 0, 0, 5deg);
+  @include pressingTransform;
+
+  font-size: 30px;
+  text-decoration: none;
+  color: $black;
+  border: 1px solid $black;
+}
+
+.navbar {
+  display: flex;
+
+  &Item {
+    display: inline;
+    margin: 0 10px;
+    color: $black;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

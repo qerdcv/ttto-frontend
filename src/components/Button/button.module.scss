@@ -1,0 +1,44 @@
+@import "src/styles/colors.scss";
+@import "src/styles/mixins";
+
+
+.btn {
+  font-size: 20px;
+  padding: 10px 30px;
+  background: transparent;
+  border: 1px solid $black;
+  user-select: none;
+  transition: all .1s ease-in-out;
+
+  &:disabled {
+    background: lightgray;
+  }
+
+  &Active {
+    &:hover {
+      transform: scale(.95);
+    }
+
+    &:active {
+      transform: scale(.9);
+    }
+
+    cursor: pointer;
+  }
+
+  &.fuzzy {
+    @include fuzzyBorder;
+
+  }
+
+  &.round {
+    @include fuzzyBorder(50%, .5px, .6px);
+
+    padding: 0;
+    height: 30px;
+    width: 30px;
+
+    border-radius: 50%;
+  }
+
+}
