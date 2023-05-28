@@ -23,6 +23,7 @@ export const useHttp = <T> () => {
       setLoading(false);
       return resp.data;
     } catch (e) {
+      console.log(e, "<- errors")
       setLoading(false);
       if (axios.isAxiosError(e)) {
         setError({

@@ -36,7 +36,7 @@ export const Field = ({ field, gameID }: IFieldProps) => {
               <span
                 key={`cell-${rowIdx}-${colIdx}`}
                 className={classNames.join(' ')}
-                onClick={handleCellClick.bind(null, [rowIdx, colIdx])
+                onClick={handleCellClick.bind(null, {row: rowIdx, col: colIdx})
                 }>{mark}</span>
             );
           })}

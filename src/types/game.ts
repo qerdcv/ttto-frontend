@@ -1,7 +1,10 @@
 import { IUser } from 'types/user';
 
 export type TField = Array<Array<Marks>>;
-export type Coords = number[];
+export interface Coords {
+  row: number;
+  col: number;
+};
 
 export enum GameState {
     pending = 'pending',

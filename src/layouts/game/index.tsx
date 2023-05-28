@@ -70,8 +70,8 @@ export const GameLayout = () => {
   useEffect(() => {
     let es: EventSource;
     const sourceURL = !process.env.NODE_ENV || process.env.NODE_ENV !== 'development'
-      ? `/api/games/${gameID}/sse`
-      : `http://localhost:4444/api/games/${gameID}/sse`;
+      ? `/api/games/${gameID}/subscribe`
+      : `http://localhost:8080/api/games/${gameID}/subscribe`;
 
     request(Game.getByID.bind(null, gameID))
       .then(game => {

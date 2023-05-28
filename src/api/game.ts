@@ -20,7 +20,7 @@ export const Game = {
   },
 
   async step(req: IGameStepRequest, gameID: number): Promise<AxiosResponse<IGame>> {
-    return await Api.patch<IGame>(`/api/games/${gameID}`, req);
+    return await Api.patch<IGame>(`/api/games/${gameID}`, req.coords);
   },
 
   async history(gameID: number): Promise<AxiosResponse<Array<IGame>>> {

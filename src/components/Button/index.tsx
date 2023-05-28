@@ -19,7 +19,6 @@ export const Button = ({
   disabled = false,
 }: IButton) => {
   const { t } = useTranslation();
-  console.log(value);
   return (
     <button
       className={[
